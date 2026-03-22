@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Warm Ivory Background */
+    --background: 0.955 0.018 82;
+    /* Dark Brown Foreground */
+    --foreground: 0.16 0.012 74;
+    /* Card - slightly lighter ivory */
+    --card: 0.975 0.012 82;
+    --card-foreground: 0.16 0.012 74;
+    --popover: 0.975 0.012 82;
+    --popover-foreground: 0.16 0.012 74;
+
+    /* Gold Primary */
+    --primary: 0.7 0.115 73;
+    --primary-foreground: 0.15 0.003 85;
+
+    /* Secondary - warm light */
+    --secondary: 0.92 0.015 75;
+    --secondary-foreground: 0.2 0.008 74;
+
+    /* Muted */
+    --muted: 0.9 0.015 80;
+    --muted-foreground: 0.48 0.028 58;
+
+    /* Accent gold lighter */
+    --accent: 0.88 0.05 73;
+    --accent-foreground: 0.2 0.008 74;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.85 0.025 73;
+    --input: 0.88 0.02 78;
+    --ring: 0.7 0.115 73;
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    --sidebar: 0.975 0.012 82;
+    --sidebar-foreground: 0.16 0.012 74;
+    --sidebar-primary: 0.7 0.115 73;
+    --sidebar-primary-foreground: 0.15 0.003 85;
+    --sidebar-accent: 0.88 0.05 73;
+    --sidebar-accent-foreground: 0.2 0.008 74;
+    --sidebar-border: 0.85 0.025 73;
+    --sidebar-ring: 0.7 0.115 73;
+
+    /* Custom tokens */
+    --gold: oklch(0.7 0.115 73);
+    --gold-light: oklch(0.82 0.09 73);
+    --gold-dark: oklch(0.55 0.1 68);
+    --maroon: oklch(0.24 0.085 18);
+    --maroon-light: oklch(0.32 0.09 18);
+    --ivory: oklch(0.955 0.018 82);
+    --ivory-dark: oklch(0.91 0.022 78);
+    --charcoal: oklch(0.15 0.005 80);
+    --whatsapp: oklch(0.73 0.19 148);
+    --taupe: oklch(0.48 0.028 58);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "DM Sans", system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+  .font-sans {
+    font-family: "DM Sans", system-ui, sans-serif;
+  }
+  .text-gold {
+    color: var(--gold);
+  }
+  .bg-gold {
+    background-color: var(--gold);
+  }
+  .bg-maroon {
+    background-color: var(--maroon);
+  }
+  .bg-ivory {
+    background-color: var(--ivory);
+  }
+  .border-gold {
+    border-color: var(--gold);
+  }
+  .gradient-gold {
+    background: linear-gradient(135deg, oklch(0.74 0.12 73), oklch(0.58 0.1 68));
+  }
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+}
